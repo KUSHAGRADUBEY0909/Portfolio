@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kushagra Dubey — Computer Science Engineering student interested in software development, AI, and cybersecurity.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Kushagra Dubey — Student Developer</title>
+  <script>
+    (() => {
+      try {
+        const saved = localStorage.getItem('kd-theme');
+        const theme = saved === 'light' || saved === 'dark' || saved === 'system' ? saved : 'system';
+        const dark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        document.documentElement.dataset.themeChoice = theme;
+      } catch (_) {
+        document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.themeChoice = 'system';
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{color-scheme:light;--bg:#f7f8fc;--surface:#fff;--surface-2:#f0f2f8;--text:#182033;--muted:#667085;--line:#e2e6ef;--accent:#2563eb;--accent-2:#60a5fa;--accent-soft:#dbeafe;--green:#16856a;--shadow:0 16px 45px rgba(28,36,67,.07);--nav:rgba(247,248,252,.82);--radius:20px;--max:1120px}
+    :root[data-theme="dark"]{color-scheme:dark;--bg:#10131b;--surface:#181d28;--surface-2:#202635;--text:#f2f4fb;--muted:#a2acc0;--line:#303849;--accent:#60a5fa;--accent-2:#93c5fd;--accent-soft:#172b4d;--green:#64d8b2;--shadow:0 18px 48px rgba(0,0,0,.22);--nav:rgba(16,19,27,.84)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65;transition:background .25s,color .25s}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--accent-2);outline-offset:3px}::selection{background:var(--accent);color:#fff}.container{width:min(var(--max),calc(100% - 44px));margin-inline:auto}.mono{font-family:"DM Mono",monospace}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.eyebrow:before{content:"";width:20px;height:2px;background:currentColor;border-radius:2px}.section{padding:96px 0}.section-head{max-width:650px;margin-bottom:36px}.section-head h2{font-size:clamp(2rem,4vw,2.7rem);line-height:1.15;letter-spacing:-.055em;margin:10px 0 12px}.section-head p{margin:0;color:var(--muted)}.accent{color:var(--accent)}.skip-link{position:absolute;left:12px;top:-80px;background:var(--surface);padding:10px 14px;border-radius:10px;z-index:1000}.skip-link:focus{top:12px}
+    /* Navigation */
+    .site-header{position:sticky;top:0;z-index:100;background:var(--nav);backdrop-filter:blur(18px);border-bottom:1px solid color-mix(in srgb,var(--line) 72%,transparent)}.nav-wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:inline-flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--accent);color:white;font-size:.83rem;box-shadow:0 6px 18px color-mix(in srgb,var(--accent) 25%,transparent)}.nav-links{display:flex;align-items:center;gap:23px}.nav-links a{font-size:.82rem;color:var(--muted);font-weight:700;transition:color .2s;position:relative}.nav-links a:hover,.nav-links a.active{color:var(--accent)}.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:2px;background:var(--accent);border-radius:4px}.nav-actions{display:flex;align-items:center;gap:9px}.theme-select{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:9px 10px;border-radius:11px;font-size:.78rem;max-width:126px}.icon-btn{width:42px;height:42px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:12px;display:grid;place-items:center}.menu-btn{display:none}
+    /* Hero */
+    .hero{padding:78px 0 74px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:430px;height:430px;right:-140px;top:-160px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 14%,transparent),transparent 68%);pointer-events:none}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:64px;position:relative}.status{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid var(--line);background:var(--surface);border-radius:999px;color:var(--muted);font-size:.78rem;font-weight:700}.status-dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px color-mix(in srgb,var(--green) 14%,transparent)}.hero h1{font-size:clamp(2.7rem,6vw,4.8rem);line-height:1.06;letter-spacing:-.075em;margin:22px 0 18px;font-weight:800}.hero h1 span{display:block;color:var(--accent)}.hero-subtitle{font-size:1.05rem;font-weight:800;letter-spacing:-.025em;margin:0 0 12px}.hero-copy{max-width:590px;color:var(--muted);font-size:1rem;margin:0}.hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 17px;border:1px solid transparent;border-radius:12px;font-size:.86rem;font-weight:800;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 24%,transparent)}.btn-primary:hover{background:var(--accent-2);color:#16122e}.btn-secondary{background:var(--surface);border-color:var(--line);color:var(--text)}.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}.hero-meta{display:flex;align-items:center;gap:17px;flex-wrap:wrap;margin-top:25px;color:var(--muted);font-size:.8rem}.hero-meta span{display:inline-flex;align-items:center;gap:7px}.hero-meta i{color:var(--accent);width:16px;height:16px}.hero-visual{min-height:390px;display:grid;place-items:center;position:relative}.orbit{width:min(100%,390px);aspect-ratio:1;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;position:relative;background:radial-gradient(circle at 50% 45%,var(--accent-soft),transparent 67%)}.orbit:before,.orbit:after{content:"";position:absolute;border:1px dashed color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:50%;inset:11%;transform:rotate(-25deg)}.orbit:after{inset:22%;transform:rotate(38deg)}.core-card{position:relative;z-index:2;width:220px;padding:22px;border-radius:22px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);transform:rotate(-3deg)}.core-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:.7rem;margin-bottom:18px}.window-dots{display:flex;gap:4px}.window-dots b{width:6px;height:6px;border-radius:50%;background:var(--line)}.code-lines{font: .78rem/2 "DM Mono",monospace}.code-lines .purple{color:var(--accent)}.code-lines .green{color:var(--green)}.code-lines .dim{color:var(--muted)}.float-chip{position:absolute;z-index:3;display:flex;align-items:center;gap:9px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);padding:11px 13px;border-radius:14px;font-size:.78rem;font-weight:800}.float-chip i{color:var(--accent);width:18px;height:18px}.chip-one{top:14%;left:0}.chip-two{right:-1%;top:29%}.chip-three{bottom:12%;left:8%}.hero-scroll{display:flex;justify-content:center;margin-top:35px;color:var(--muted);font-size:.75rem;gap:8px;align-items:center}
+    /* Shared cards */
+    .surface-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 5px 20px rgba(20,28,50,.025)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}.about-copy{padding:30px}.about-copy p{color:var(--muted);margin:0 0 14px}.about-copy p:last-child{margin-bottom:0}.about-note{display:flex;gap:14px;align-items:flex-start;margin-top:22px;padding:16px;border-radius:14px;background:var(--accent-soft);color:var(--text);font-size:.88rem}.about-note i{color:var(--accent);flex-shrink:0;margin-top:2px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.info-tile{padding:22px;display:flex;flex-direction:column;gap:13px;justify-content:space-between;min-height:145px}.info-tile i{color:var(--accent);width:22px;height:22px}.info-tile strong{font-size:.92rem}.info-tile span{font-size:.78rem;color:var(--muted)}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill-card{padding:22px;transition:transform .22s,border-color .22s}.skill-card:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}.skill-title{display:flex;align-items:center;gap:10px;margin-bottom:16px}.skill-title i{color:var(--accent);width:21px;height:21px}.skill-title h3{font-size:.91rem;letter-spacing:-.02em;margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{display:inline-flex;align-items:center;padding:6px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);font-size:.74rem;font-weight:700;color:var(--muted)}
+    .projects-section{background:var(--surface-2)}.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-card{display:flex;flex-direction:column;overflow:hidden;transition:transform .24s,border-color .24s,box-shadow .24s}.project-card:hover,.project-card:focus-within{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 48%,var(--line));box-shadow:var(--shadow)}.project-art{height:150px;padding:20px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-soft),var(--surface))}.project-art:after{content:"";position:absolute;width:160px;height:160px;border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-radius:50%;right:-38px;bottom:-100px;box-shadow:0 0 0 18px color-mix(in srgb,var(--accent) 5%,transparent),0 0 0 38px color-mix(in srgb,var(--accent) 4%,transparent)}.project-icon{width:54px;height:54px;border-radius:16px;background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--accent);z-index:1}.project-icon i{width:26px;height:26px}.project-index{font: .75rem "DM Mono",monospace;color:var(--muted);align-self:flex-start;z-index:1}.project-body{padding:23px;display:flex;flex-direction:column;flex:1}.project-body h3{margin:0 0 10px;font-size:1.08rem;line-height:1.4;letter-spacing:-.035em}.project-body p{color:var(--muted);font-size:.85rem;margin:0 0 18px}.project-features{padding-left:18px;color:var(--muted);font-size:.78rem;margin:0 0 20px}.project-features li{padding:3px 0}.project-body .tags{margin-top:auto;margin-bottom:20px}.project-link{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.82rem;color:var(--accent);width:max-content}.project-link:hover{text-decoration:underline;text-underline-offset:4px}
+    .timeline{display:grid;gap:15px;position:relative}.edu-card{display:grid;grid-template-columns:64px 1fr auto;gap:19px;align-items:start;padding:24px}.edu-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:15px;background:var(--accent-soft);color:var(--accent)}.edu-icon i{width:24px;height:24px}.edu-main h3{font-size:1rem;margin:1px 0 5px;letter-spacing:-.025em}.edu-main p{color:var(--muted);font-size:.85rem;margin:0}.edu-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;color:var(--muted);font-size:.78rem}.edu-meta span{display:inline-flex;align-items:center;gap:6px}.edu-meta i{width:14px;height:14px;color:var(--accent)}.edu-score{padding:7px 10px;background:var(--accent-soft);color:var(--accent);border-radius:9px;font-size:.78rem;font-weight:800;white-space:nowrap}.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.cert-card{padding:22px;display:flex;flex-direction:column;min-height:210px;transition:transform .2s,border-color .2s}.cert-card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.cert-icon{width:43px;height:43px;border-radius:13px;background:var(--accent-soft);display:grid;place-items:center;color:var(--accent);margin-bottom:16px}.cert-card h3{font-size:.92rem;line-height:1.45;margin:0 0 8px}.cert-card p{color:var(--muted);font-size:.79rem;margin:0 0 17px}.cert-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;font-size:.76rem;color:var(--muted)}.cert-bottom a{display:inline-flex;gap:6px;align-items:center;color:var(--accent);font-weight:800}.cert-bottom a:hover{text-decoration:underline;text-underline-offset:3px}
+    .contact-grid{display:grid;grid-template-columns:1fr;max-width:560px;margin-inline:auto;gap:22px}.contact-panel{padding:28px}.contact-panel h3{font-size:1.1rem;margin:0 0 8px}.contact-panel>p{color:var(--muted);font-size:.87rem;margin:0 0 23px}.contact-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.contact-item{display:grid;place-items:center;min-height:76px;padding:14px;border:1px solid var(--line);border-radius:13px;transition:transform .2s,border-color .2s,background .2s}.contact-item:hover,.contact-item:focus-visible{transform:translateY(-3px);border-color:var(--accent);background:var(--accent-soft)}.contact-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:var(--accent-soft);color:var(--accent);flex-shrink:0}.contact-icon i{width:21px;height:21px}.form-grid{display:grid;gap:15px}.field{display:grid;gap:7px}.field label{font-size:.8rem;font-weight:800}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--text);padding:12px 13px;font-size:.87rem;transition:border-color .2s,box-shadow .2s}.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 13%,transparent);outline:none}.field textarea{min-height:135px;resize:vertical}.form-help{font-size:.74rem;color:var(--muted);margin:0}.form-status{font-size:.82rem;margin:0;min-height:1.3em;color:var(--green)}.form-status.error{color:#d34d57}.form-actions{display:flex;flex-wrap:wrap;gap:10px}.site-footer{border-top:1px solid var(--line);padding:25px 0}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px;color:var(--muted);font-size:.78rem}.footer-links{display:flex;align-items:center;gap:17px}.footer-links a:hover{color:var(--accent)}.back-top{display:inline-flex;align-items:center;gap:7px;font-weight:800;color:var(--accent)}
+    .reveal{opacity:1;transform:none}.js-motion .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.js-motion .reveal.is-visible{opacity:1;transform:translateY(0)}.hero .reveal{animation:hero-in .65s both}.hero .reveal:nth-child(2){animation-delay:.08s}.hero .reveal:nth-child(3){animation-delay:.15s}@keyframes hero-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:1000px){.nav-links{gap:14px}.nav-links a{font-size:.76rem}.hero-grid{gap:32px}.skills-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:780px){.container{width:min(var(--max),calc(100% - 32px))}.nav-wrap{height:68px}.menu-btn{display:grid}.nav-links{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;padding:17px 22px 22px;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow);grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.nav-links.open{display:grid}.nav-links a{padding:12px 0;font-size:.86rem}.nav-links a.active:after{bottom:5px;right:auto;width:22px}.theme-select{max-width:112px}.hero{padding:58px 0 48px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:clamp(2.7rem,10vw,4.1rem)}.hero-visual{min-height:330px}.orbit{width:min(82vw,340px)}.chip-one{left:4%}.chip-two{right:2%}.chip-three{left:8%}.section{padding:72px 0}.about-grid,.contact-grid{grid-template-columns:1fr}.info-grid{grid-template-columns:repeat(2,1fr)}.edu-card{grid-template-columns:54px 1fr;gap:14px}.edu-score{grid-column:2;justify-self:start}.projects-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.brand{gap:8px;font-size:.9rem}.brand-mark{width:34px;height:34px}.theme-select{font-size:.72rem;padding:8px 5px;max-width:98px}.nav-actions{gap:6px}.icon-btn{width:38px;height:38px}.hero h1{font-size:2.65rem}.hero-subtitle{font-size:.96rem}.hero-copy{font-size:.91rem}.hero-buttons .btn{flex:1 1 100%}.hero-meta{gap:12px}.hero-visual{min-height:300px}.core-card{width:190px;padding:18px}.float-chip{font-size:.69rem;padding:9px 10px}.chip-two{right:-1%}.section{padding:62px 0}.section-head h2{font-size:2rem}.about-copy,.contact-panel{padding:21px}.info-grid{gap:10px}.info-tile{padding:16px;min-height:130px}.skills-grid,.projects-grid,.cert-grid{grid-template-columns:1fr}.skill-card{padding:20px}.project-art{height:128px}.project-body{padding:20px}.cert-card{min-height:0}.edu-card{padding:18px}.edu-icon{width:46px;height:46px}.footer-links{gap:13px;flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js-motion .reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Kushagra Dubey home"><span class="brand-mark mono">KD.</span><span>Kushagra Dubey</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <label class="sr-only" for="themeSelect" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Color theme</label>
+        <select class="theme-select" id="themeSelect" aria-label="Choose color theme"><option value="system">◐ System</option><option value="light">☀ Light</option><option value="dark">☾ Dark</option></select>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="reveal"><span class="status"><span class="status-dot"></span> Computer Science Engineering Student</span></div>
+          <div class="reveal"><h1>Hi, I'm <span>Kushagra Dubey.</span></h1></div>
+          <div class="reveal"><p class="hero-subtitle">Aspiring Software Engineer <span class="accent">|</span> AI &amp; Cybersecurity Enthusiast</p><p class="hero-copy">I enjoy solving problems, building practical software applications, and exploring how AI and cybersecurity can make technology more useful and secure.</p></div>
+          <div class="hero-buttons reveal"><a class="btn btn-primary" href="#projects">View My Projects <i data-lucide="arrow-up-right"></i></a><a class="btn btn-secondary" href="#contact">Contact Me <i data-lucide="mail"></i></a><a class="btn btn-secondary" href="https://github.com/KUSHAGRADUBEY0909" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="github"></i></a></div>
+          <div class="hero-meta reveal"><span><i data-lucide="map-pin"></i> Bengaluru, India</span><span><i data-lucide="graduation-cap"></i> New Horizon College of Engineering</span></div>
+        </div>
+        <div class="hero-visual reveal" aria-label="Decorative code illustration">
+          <div class="orbit"><div class="core-card"><div class="core-top"><span class="mono">developer.js</span><span class="window-dots"><b></b><b></b><b></b></span></div><div class="code-lines"><div><span class="purple">const</span> developer = {</div><div>&nbsp;&nbsp;name: <span class="green">"Kushagra"</span>,</div><div>&nbsp;&nbsp;focus: [</div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Software"</span>,</div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"AI"</span>,</div><div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="green">"Security"</span></div><div>&nbsp;&nbsp;]</div><div>};<span class="dim"> _</span></div></div></div></div>
+          <div class="float-chip chip-one"><i data-lucide="code-2"></i> Build &amp; learn</div><div class="float-chip chip-two"><i data-lucide="shield-check"></i> Cybersecurity</div><div class="float-chip chip-three"><i data-lucide="brain-circuit"></i> Applied AI</div>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#about"><i data-lucide="arrow-down"></i> A little more about me</a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">About me</span><h2>Curious by nature.<br><span class="accent">Builder by practice.</span></h2><p>A little context on what I study and what I like to build.</p></div>
+        <div class="about-grid">
+          <article class="surface-card about-copy reveal"><p>I'm pursuing a Bachelor of Engineering in Computer Science and Engineering at New Horizon College of Engineering in Bengaluru.</p><p>I enjoy building practical applications and exploring software development, problem-solving, AI-powered systems, and cybersecurity. Working on projects helps me connect concepts from coursework with real implementation.</p><p>I'm focused on strengthening my technical foundations, learning consistently, and applying what I learn through hands-on work.</p><div class="about-note"><i data-lucide="lightbulb"></i><span><strong>What motivates me</strong><br>Understanding how things work, then turning that understanding into something useful.</span></div></article>
+          <div class="info-grid"><article class="surface-card info-tile reveal"><i data-lucide="terminal"></i><div><strong>Software development</strong><br><span>Build practical applications</span></div></article><article class="surface-card info-tile reveal"><i data-lucide="brain-circuit"></i><div><strong>Artificial intelligence</strong><br><span>Explore semantic search and ML</span></div></article><article class="surface-card info-tile reveal"><i data-lucide="shield-check"></i><div><strong>Cybersecurity</strong><br><span>Explore threat detection</span></div></article><article class="surface-card info-tile reveal"><i data-lucide="puzzle"></i><div><strong>Problem-solving</strong><br><span>Strengthen CS fundamentals</span></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container"><div class="section-head reveal"><span class="eyebrow">Technical skills</span><h2>Tools I work with.</h2><p>A snapshot of the languages, fundamentals, and technologies I've used in coursework and projects.</p></div>
+        <div class="skills-grid">
+          <article class="surface-card skill-card reveal"><div class="skill-title"><i data-lucide="code-2"></i><h3>Programming languages</h3></div><div class="tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span></div></article>
+          <article class="surface-card skill-card reveal"><div class="skill-title"><i data-lucide="blocks"></i><h3>CS fundamentals</h3></div><div class="tags"><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">Algorithms</span><span class="tag">OOP</span><span class="tag">DBMS</span></div></article>
+          <article class="surface-card skill-card reveal"><div class="skill-title"><i data-lucide="wrench"></i><h3>Tools &amp; technologies</h3></div><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">MySQL</span><span class="tag">Streamlit</span><span class="tag">VirusTotal API</span><span class="tag">Sentence Transformers</span><span class="tag">FAISS</span></div></article>
+          <article class="surface-card skill-card reveal"><div class="skill-title"><i data-lucide="layers-3"></i><h3>Additional concepts</h3></div><div class="tags"><span class="tag">GUI Design</span><span class="tag">Client-Server Architecture</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container"><div class="section-head reveal"><span class="eyebrow">Selected work</span><h2>Projects I've built.</h2><p>Hands-on projects where I explored application development, semantic retrieval, and cybersecurity.</p></div>
+        <div class="projects-grid">
+          <article class="surface-card project-card reveal"><div class="project-art"><span class="project-index">PROJECT / 01</span><span class="project-icon"><i data-lucide="shield-check"></i></span></div><div class="project-body"><h3>Online Mail Threat Detector and Website Checker</h3><p>A cybersecurity project designed to analyze emails and websites for potential phishing and malware threats.</p><ul class="project-features"><li>Integrated threat-intelligence APIs to scan URLs and attachments.</li><li>Used Java and Python for link analysis and malicious-pattern recognition.</li><li>Designed a GUI to present threat levels and safe-browsing recommendations.</li></ul><div class="tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">VirusTotal API</span></div><a class="project-link" href="https://github.com/zscreation69-web/NH-SJC25HACK-CYSEC-027" target="_blank" rel="noopener noreferrer">View on GitHub <i data-lucide="arrow-up-right"></i></a></div></article>
+          <article class="surface-card project-card reveal"><div class="project-art"><span class="project-index">PROJECT / 02</span><span class="project-icon"><i data-lucide="brain-circuit"></i></span></div><div class="project-body"><h3>AI-Powered Mutual Fund Recommendation System</h3><p>A semantic-search application that finds relevant Indian mutual funds from natural-language queries.</p><ul class="project-features"><li>Generated semantic embeddings with Sentence Transformers.</li><li>Used FAISS for similarity-based retrieval beyond exact keyword matches.</li><li>Built an interactive Streamlit interface.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Sentence Transformers</span><span class="tag">FAISS</span></div><a class="project-link" href="https://github.com/KUSHAGRADUBEY0909/83TECHTITANS" target="_blank" rel="noopener noreferrer">View on GitHub <i data-lucide="arrow-up-right"></i></a></div></article>
+          <article class="surface-card project-card reveal"><div class="project-art"><span class="project-index">PROJECT / 03</span><span class="project-icon"><i data-lucide="database"></i></span></div><div class="project-body"><h3>Pharmacy Management System</h3><p>A desktop application designed to support pharmacy inventory management and stock tracking.</p><ul class="project-features"><li>Developed a graphical interface using Tkinter.</li><li>Used MySQL for database operations.</li><li>Implemented medicine search across branches and inventory updates.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Tkinter</span><span class="tag">MySQL</span></div><a class="project-link" href="https://github.com/KUSHAGRADUBEY0909/pharmanew" target="_blank" rel="noopener noreferrer">View on GitHub <i data-lucide="arrow-up-right"></i></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container"><div class="section-head reveal"><span class="eyebrow">Education</span><h2>The academic path so far.</h2><p>My formal education and academic results.</p></div>
+        <div class="timeline">
+          <article class="surface-card edu-card reveal"><div class="edu-icon"><i data-lucide="graduation-cap"></i></div><div class="edu-main"><h3>Bachelor of Engineering — Computer Science and Engineering</h3><p>New Horizon College of Engineering · Bengaluru, India</p><div class="edu-meta"><span><i data-lucide="calendar"></i> October 2023 – Present</span><span><i data-lucide="book-open"></i> Undergraduate</span></div></div><span class="edu-score">CGPA 8.99</span></article>
+          <article class="surface-card edu-card reveal"><div class="edu-icon"><i data-lucide="book-open"></i></div><div class="edu-main"><h3>Class XII — ISC Board</h3><p>St. John's Marhauli · Varanasi, India</p><div class="edu-meta"><span><i data-lucide="calendar"></i> Completed 2023</span></div></div><span class="edu-score">91.4%</span></article>
+          <article class="surface-card edu-card reveal"><div class="edu-icon"><i data-lucide="book-marked"></i></div><div class="edu-main"><h3>Class X — ICSE Board</h3><p>St. John's Marhauli · Varanasi, India</p><div class="edu-meta"><span><i data-lucide="calendar"></i> Completed 2021</span></div></div><span class="edu-score">92.8%</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container"><div class="section-head reveal"><span class="eyebrow">Certifications &amp; participation</span><h2>Learning beyond the classroom.</h2><p>Courses and events that have supported my learning and practical experience.</p></div>
+        <div class="cert-grid">
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="brain-circuit"></i></div><h3>Fundamentals of Artificial Intelligence</h3><p>NPTEL · AI concepts, search algorithms, and logic.</p><div class="cert-bottom"><span>2025</span><a href="https://drive.google.com/file/d/1cK9W_vKeRN1nnCFJQSW-Ivmp4OUSso2Z/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Certificate <i data-lucide="arrow-up-right"></i></a></div></article>
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="radio-tower"></i></div><h3>Introduction to Internet of Things</h3><p>NPTEL · Introductory concepts in connected devices and IoT.</p><div class="cert-bottom"><span>2025</span><a href="https://drive.google.com/file/d/1ev4XzEdaqDWrUwaURmnjhNfS4x9gEBlW/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Certificate <i data-lucide="arrow-up-right"></i></a></div></article>
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="database"></i></div><h3>Fundamentals and Advanced Concepts of DBMS</h3><p>Scalar · Database schema design, normalization, and advanced SQL queries.</p><div class="cert-bottom"><span>Course</span><span>Completed details not supplied</span></div></article>
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="lightbulb"></i></div><h3>QuantumX Hackathon</h3><p>Participant · Rapid prototyping and innovative solution development.</p><div class="cert-bottom"><span>2025</span><span>Participation</span></div></article>
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="shield-check"></i></div><h3>48-Hour Hackathon</h3><p>New Horizon College of Engineering · Developed the Online Mail Threat Detector project under time constraints.</p><div class="cert-bottom"><span>April 2025</span><span>Participation</span></div></article>
+          <article class="surface-card cert-card reveal"><div class="cert-icon"><i data-lucide="code"></i></div><h3>Silver Spectrum Coding Contest</h3><p>Participant · Competitive programming challenges focused on algorithmic problem-solving.</p><div class="cert-bottom"><span>Coding contest</span><a href="https://drive.google.com/file/d/1NO7nzqG2GfTOVIFpU_ADLjKUjhWf91XL/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Document <i data-lucide="arrow-up-right"></i></a></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container"><div class="section-head reveal"><span class="eyebrow">Get in touch</span><h2>Let's <span class="accent">connect.</span></h2><p>Reach out about software engineering opportunities, project collaboration, or a professional discussion.</p></div>
+        <div class="contact-grid">
+          <article class="surface-card contact-panel reveal"><h3>Find me online</h3><p>Use an icon below to connect with me.</p><div class="contact-list">
+            <a class="contact-item" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kushagradubey61%40gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Compose an email to Kushagra in Gmail" title="Email via Gmail"><span class="contact-icon"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg></span></a>
+            <a class="contact-item" href="https://github.com/KUSHAGRADUBEY0909" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub profile" title="GitHub"><span class="contact-icon"><svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.07c-3.1.68-3.76-1.32-3.76-1.32-.5-1.3-1.24-1.65-1.24-1.65-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 .1.77 2.2 3.4 1.56.1-.72.4-1.22.7-1.5-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.27-2.61 5.22-5.1 5.5.4.35.75 1.02.75 2.06V22c0 .29.2.63.77.52A11.1 11.1 0 0 0 12 .9Z"/></svg></span></a>
+            <a class="contact-item" href="https://linkedin.com/in/kushagra-dubey-02a1103ab" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn profile" title="LinkedIn"><span class="contact-icon"><svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor" aria-hidden="true"><path d="M5.2 3.5a2.2 2.2 0 1 1 0 4.4 2.2 2.2 0 0 1 0-4.4ZM3.3 9.4h3.8v11.3H3.3V9.4Zm6.2 0h3.6V11h.05c.5-.94 1.72-1.93 3.54-1.93 3.79 0 4.49 2.49 4.49 5.73v5.9h-3.77v-5.23c0-1.25-.02-2.86-1.74-2.86-1.75 0-2.02 1.36-2.02 2.77v5.32H9.5V9.4Z"/></svg></span></a>
+          </div></article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row"><span>© <span id="year"></span> Kushagra Dubey. Built with curiosity and code.</span><div class="footer-links"><a href="https://github.com/KUSHAGRADUBEY0909" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/kushagra-dubey-02a1103ab" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="back-top" href="#home">Back to top <i data-lucide="arrow-up"></i></a></div></div></footer>
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const themeSelect = document.getElementById('themeSelect');
+      const media = window.matchMedia('(prefers-color-scheme: dark)');
+      const getChoice = () => root.dataset.themeChoice || 'system';
+      function applyTheme(choice, save = true) {
+        const valid = ['light', 'dark', 'system'].includes(choice) ? choice : 'system';
+        const dark = valid === 'dark' || (valid === 'system' && media.matches);
+        root.dataset.theme = dark ? 'dark' : 'light';
+        root.dataset.themeChoice = valid;
+        if (themeSelect) themeSelect.value = valid;
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = dark ? '#10131b' : '#f7f8fc';
+        if (save) { try { localStorage.setItem('kd-theme', valid); } catch (_) {} }
+      }
+      themeSelect.value = getChoice();
+      themeSelect.addEventListener('change', event => applyTheme(event.target.value));
+      const onSystemChange = () => { if (getChoice() === 'system') applyTheme('system', false); };
+      if (media.addEventListener) media.addEventListener('change', onSystemChange); else if (media.addListener) media.addListener(onSystemChange);
+
+      const menuBtn = document.getElementById('menuBtn');
+      const nav = document.getElementById('navLinks');
+      function closeMenu() { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Open navigation menu'); menuBtn.innerHTML = '<i data-lucide="menu"></i>'; if (window.lucide) window.lucide.createIcons(); }
+      menuBtn.addEventListener('click', () => {
+        const open = !nav.classList.contains('open');
+        nav.classList.toggle('open', open); menuBtn.setAttribute('aria-expanded', String(open)); menuBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        menuBtn.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>'; if (window.lucide) window.lucide.createIcons();
+      });
+      nav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+
+      const sectionLinks = [...nav.querySelectorAll('a')];
+      const sections = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        const activeObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              sectionLinks.forEach(link => {
+                const active = link.getAttribute('href') === '#' + entry.target.id;
+                link.classList.toggle('active', active);
+                if (active) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+              });
+            }
+          });
+        }, { rootMargin: '-25% 0px -60% 0px', threshold: 0 });
+        sections.forEach(section => activeObserver.observe(section));
+      }
+
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if ('IntersectionObserver' in window && !reduceMotion) {
+        document.documentElement.classList.add('js-motion');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+      if (window.lucide) window.lucide.createIcons();
+    })();
+  </script>
+</body>
+</html>
